@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C06586128B858F400E47F3C /* TempatWisata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06586028B858F400E47F3C /* TempatWisata.swift */; };
+		5C06586128B858F400E47F3C /* TempatWisataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06586028B858F400E47F3C /* TempatWisataModel.swift */; };
 		5C06586428B8595700E47F3C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5C06586328B8595700E47F3C /* Kingfisher */; };
+		5C06586828B85BEB00E47F3C /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06586728B85BEB00E47F3C /* URLSession.swift */; };
+		5C06586A28B85E4900E47F3C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06586928B85E4900E47F3C /* ApiManager.swift */; };
+		5C06586C28B85E5700E47F3C /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06586B28B85E5700E47F3C /* ApiConstant.swift */; };
+		5C1608CF28B900150079BFF6 /* TempatWisataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1608CE28B900150079BFF6 /* TempatWisataTableViewCell.swift */; };
+		5C1608D128B9089D0079BFF6 /* TempatWisataDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1608D028B9089D0079BFF6 /* TempatWisataDetail.storyboard */; };
+		5C1608D328B908F90079BFF6 /* TempatWisataDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1608D228B908F90079BFF6 /* TempatWisataDetailController.swift */; };
 		5CAE111228B7A41C008D4641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE111128B7A41C008D4641 /* AppDelegate.swift */; };
 		5CAE111428B7A41C008D4641 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE111328B7A41C008D4641 /* SceneDelegate.swift */; };
 		5CAE111628B7A41C008D4641 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE111528B7A41C008D4641 /* ViewController.swift */; };
@@ -18,7 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C06586028B858F400E47F3C /* TempatWisata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempatWisata.swift; sourceTree = "<group>"; };
+		5C06586028B858F400E47F3C /* TempatWisataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempatWisataModel.swift; sourceTree = "<group>"; };
+		5C06586728B85BEB00E47F3C /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		5C06586928B85E4900E47F3C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = DicodingBelajarMembuatAppIOS/Manager/ApiManager.swift; sourceTree = SOURCE_ROOT; };
+		5C06586B28B85E5700E47F3C /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
+		5C1608CE28B900150079BFF6 /* TempatWisataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempatWisataTableViewCell.swift; sourceTree = "<group>"; };
+		5C1608D028B9089D0079BFF6 /* TempatWisataDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TempatWisataDetail.storyboard; sourceTree = "<group>"; };
+		5C1608D228B908F90079BFF6 /* TempatWisataDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempatWisataDetailController.swift; sourceTree = "<group>"; };
 		5CAE110E28B7A41C008D4641 /* DicodingBelajarMembuatAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DicodingBelajarMembuatAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAE111128B7A41C008D4641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAE111328B7A41C008D4641 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +56,9 @@
 		5C06585B28B8586200E47F3C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5CAE111528B7A41C008D4641 /* ViewController.swift */,
 				5CAE111728B7A41C008D4641 /* Main.storyboard */,
+				5C1608CE28B900150079BFF6 /* TempatWisataTableViewCell.swift */,
+				5C1608D028B9089D0079BFF6 /* TempatWisataDetail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -53,6 +66,8 @@
 		5C06585C28B8586A00E47F3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5CAE111528B7A41C008D4641 /* ViewController.swift */,
+				5C1608D228B908F90079BFF6 /* TempatWisataDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -60,7 +75,7 @@
 		5C06585D28B8587800E47F3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5C06586028B858F400E47F3C /* TempatWisata.swift */,
+				5C06586028B858F400E47F3C /* TempatWisataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -68,6 +83,7 @@
 		5C06585E28B8588C00E47F3C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5C06586728B85BEB00E47F3C /* URLSession.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -75,6 +91,8 @@
 		5C06585F28B8589600E47F3C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5C06586928B85E4900E47F3C /* ApiManager.swift */,
+				5C06586B28B85E5700E47F3C /* ApiConstant.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -179,6 +197,7 @@
 				5CAE111E28B7A420008D4641 /* LaunchScreen.storyboard in Resources */,
 				5CAE111B28B7A420008D4641 /* Assets.xcassets in Resources */,
 				5CAE111928B7A41C008D4641 /* Main.storyboard in Resources */,
+				5C1608D128B9089D0079BFF6 /* TempatWisataDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,8 +209,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CAE111628B7A41C008D4641 /* ViewController.swift in Sources */,
-				5C06586128B858F400E47F3C /* TempatWisata.swift in Sources */,
+				5C1608CF28B900150079BFF6 /* TempatWisataTableViewCell.swift in Sources */,
+				5C06586C28B85E5700E47F3C /* ApiConstant.swift in Sources */,
+				5C06586128B858F400E47F3C /* TempatWisataModel.swift in Sources */,
+				5C06586828B85BEB00E47F3C /* URLSession.swift in Sources */,
 				5CAE111228B7A41C008D4641 /* AppDelegate.swift in Sources */,
+				5C06586A28B85E4900E47F3C /* ApiManager.swift in Sources */,
+				5C1608D328B908F90079BFF6 /* TempatWisataDetailController.swift in Sources */,
 				5CAE111428B7A41C008D4641 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

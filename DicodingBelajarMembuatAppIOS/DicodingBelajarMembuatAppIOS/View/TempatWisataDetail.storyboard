@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tempat Wisata Detail Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TempatWisataDetailController" customModule="DicodingBelajarMembuatAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-eM-muV">
+                                <rect key="frame" x="20" y="68" width="120" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="1g6-QE-dc7"/>
+                                    <constraint firstAttribute="width" constant="120" id="ZLS-Xl-8Lt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempat Wisata" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-0I-xrN">
+                                <rect key="frame" x="152" y="68" width="246" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulau Komodo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-ZC-o6m">
+                                <rect key="frame" x="152" y="92.5" width="246" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letak" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji5-fO-o9B">
+                                <rect key="frame" x="152" y="117.5" width="246" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGn-eG-KJ2">
+                                <rect key="frame" x="20" y="252" width="374" height="590"/>
+                                <mutableString key="text">Pulau Komodo adalah sebuah pulau yang terletak di Kepulauan Nusa Tenggara. Pulau Komodo dikenal sebagai habitat asli hewan komodo. Pulau ini juga merupakan kawasan Taman Nasional Komodo yang dikelola oleh Pemerintah Pusat. Pulau Komodo berada di sebelah timur Pulau Sumbawa, yang dipisahkan oleh Selat Sape. Di Pulau Komodo, hewan komodo hidup dan berkembang biak dengan baik. Hingga Agustus 2009, di pulau ini terdapat sekitar 1300 ekor komodo. Ditambah dengan pulau lain, seperti Pulau Rinca dan dan Gili Motang, jumlah mereka keseluruhan mencapai sekitar 2500 ekor. Ada pula sekitar 100 ekor komodo di Cagar Alam Wae Wuul di daratan Pulau Flores tapi tidak termasuk wilayah Taman Nasional Komodo.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabupaten Manggarai Barat, NTT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tve-JP-0S0">
+                                <rect key="frame" x="152" y="142" width="246" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ji5-fO-o9B" firstAttribute="top" secondItem="3aW-ZC-o6m" secondAttribute="bottom" constant="8" id="0Jz-5l-wU5"/>
+                            <constraint firstItem="tve-JP-0S0" firstAttribute="top" secondItem="ji5-fO-o9B" secondAttribute="bottom" constant="4" id="3o3-xo-bMQ"/>
+                            <constraint firstItem="1lP-eM-muV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="4kr-l1-6Vw"/>
+                            <constraint firstItem="3aW-ZC-o6m" firstAttribute="leading" secondItem="1lP-eM-muV" secondAttribute="trailing" constant="12" id="53U-o4-kwr"/>
+                            <constraint firstItem="wGn-eG-KJ2" firstAttribute="top" secondItem="1lP-eM-muV" secondAttribute="bottom" constant="44" id="6fc-M7-GEM"/>
+                            <constraint firstItem="ji5-fO-o9B" firstAttribute="leading" secondItem="1lP-eM-muV" secondAttribute="trailing" constant="12" id="7Cg-xe-GCM"/>
+                            <constraint firstItem="1lP-eM-muV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="7re-ZE-CK8"/>
+                            <constraint firstItem="wGn-eG-KJ2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8L0-UA-hKG"/>
+                            <constraint firstItem="7KS-0I-xrN" firstAttribute="leading" secondItem="1lP-eM-muV" secondAttribute="trailing" constant="12" id="HGs-36-MJd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3aW-ZC-o6m" secondAttribute="trailing" constant="16" id="KlC-Dm-hwe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ji5-fO-o9B" secondAttribute="trailing" constant="16" id="StC-Yd-TA2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wGn-eG-KJ2" secondAttribute="trailing" constant="20" id="TBI-uR-zYr"/>
+                            <constraint firstItem="7KS-0I-xrN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="W9U-UO-lab"/>
+                            <constraint firstItem="3aW-ZC-o6m" firstAttribute="top" secondItem="7KS-0I-xrN" secondAttribute="bottom" constant="4" id="Z7r-VN-Ebp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wGn-eG-KJ2" secondAttribute="bottom" constant="20" id="ace-Ri-jHP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7KS-0I-xrN" secondAttribute="trailing" constant="16" id="g88-6P-5je"/>
+                            <constraint firstItem="tve-JP-0S0" firstAttribute="leading" secondItem="1lP-eM-muV" secondAttribute="trailing" constant="12" id="maU-41-3z4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tve-JP-0S0" secondAttribute="trailing" constant="16" id="rVp-Nh-o9y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descLbl" destination="wGn-eG-KJ2" id="FzH-qn-e8G"/>
+                        <outlet property="detailImageView" destination="1lP-eM-muV" id="q97-oT-jmc"/>
+                        <outlet property="letakLbl" destination="tve-JP-0S0" id="I2i-Ny-Mac"/>
+                        <outlet property="letakTitleLbl" destination="ji5-fO-o9B" id="1jP-EY-PHy"/>
+                        <outlet property="tempatWisataLbl" destination="3aW-ZC-o6m" id="rP1-sk-sg7"/>
+                        <outlet property="tempatWisataTitleLbl" destination="7KS-0I-xrN" id="RCc-04-dN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kingfisher-6.jpg" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,17 +8,97 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tempat Wisata-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DicodingBelajarMembuatAppIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-I3-Oiw">
+                                <rect key="frame" x="16" y="88" width="382" height="758"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="136" id="vEc-61-oKP" customClass="TempatWisataTableViewCell" customModule="DicodingBelajarMembuatAppIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="382" height="136"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vEc-61-oKP" id="gCp-2P-Z4E">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulau Komodo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dLn-Au-L5u">
+                                                    <rect key="frame" x="124" y="24" width="192" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ork-E0-yCP">
+                                                    <rect key="frame" x="12" y="8" width="100" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="MnB-3s-dkK"/>
+                                                        <constraint firstAttribute="width" constant="100" id="h06-6E-gmQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabupaten Manggarai Barat, NTT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-Hc-cqe">
+                                                    <rect key="frame" x="124" y="49" width="242" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X5V-gy-FKT">
+                                                    <rect key="frame" x="124" y="93.5" width="20.5" height="17.5"/>
+                                                    <color key="tintColor" red="1" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fee-4A-RNk">
+                                                    <rect key="frame" x="148.5" y="96" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="X5V-gy-FKT" firstAttribute="leading" secondItem="ork-E0-yCP" secondAttribute="trailing" constant="12" id="7Ly-XX-M6F"/>
+                                                <constraint firstAttribute="bottom" secondItem="X5V-gy-FKT" secondAttribute="bottom" constant="24" id="Cnj-zG-iza"/>
+                                                <constraint firstItem="ork-E0-yCP" firstAttribute="leading" secondItem="gCp-2P-Z4E" secondAttribute="leading" constant="12" id="EiH-Ah-elX"/>
+                                                <constraint firstItem="5fh-Hc-cqe" firstAttribute="top" secondItem="dLn-Au-L5u" secondAttribute="bottom" constant="4" id="OeV-62-kKO"/>
+                                                <constraint firstItem="dLn-Au-L5u" firstAttribute="leading" secondItem="ork-E0-yCP" secondAttribute="trailing" constant="12" id="RhA-TU-cI6"/>
+                                                <constraint firstAttribute="trailing" secondItem="5fh-Hc-cqe" secondAttribute="trailing" constant="16" id="h6c-EX-8sU"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fee-4A-RNk" secondAttribute="bottom" constant="24" id="qfF-e4-f2Y"/>
+                                                <constraint firstItem="Fee-4A-RNk" firstAttribute="leading" secondItem="X5V-gy-FKT" secondAttribute="trailing" constant="4" id="rsF-c6-VUQ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fee-4A-RNk" secondAttribute="trailing" constant="20" symbolic="YES" id="sF7-I4-9aF"/>
+                                                <constraint firstItem="ork-E0-yCP" firstAttribute="top" secondItem="gCp-2P-Z4E" secondAttribute="top" constant="8" id="sQd-5a-2Xr"/>
+                                                <constraint firstAttribute="trailing" secondItem="dLn-Au-L5u" secondAttribute="trailing" constant="16" id="vt7-IY-M3Q"/>
+                                                <constraint firstItem="5fh-Hc-cqe" firstAttribute="leading" secondItem="ork-E0-yCP" secondAttribute="trailing" constant="12" id="xLS-m2-9Nh"/>
+                                                <constraint firstAttribute="bottom" secondItem="ork-E0-yCP" secondAttribute="bottom" constant="8" id="xYn-9x-RvB"/>
+                                                <constraint firstItem="dLn-Au-L5u" firstAttribute="leading" secondItem="ork-E0-yCP" secondAttribute="trailing" constant="12" id="yLI-ut-wyj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLbl" destination="5fh-Hc-cqe" id="ixg-vx-99c"/>
+                                            <outlet property="likeIcon" destination="X5V-gy-FKT" id="cgi-gg-BEL"/>
+                                            <outlet property="likesLbl" destination="Fee-4A-RNk" id="dfl-nC-FWv"/>
+                                            <outlet property="placeImageView" destination="ork-E0-yCP" id="dgY-EP-beL"/>
+                                            <outlet property="placeLbl" destination="dLn-Au-L5u" id="QT3-Ji-hFd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PEA-I3-Oiw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0KQ-bA-wrS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PEA-I3-Oiw" secondAttribute="bottom" constant="16" id="OA4-xI-Yri"/>
+                            <constraint firstItem="PEA-I3-Oiw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Odp-Gf-4DY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PEA-I3-Oiw" secondAttribute="trailing" constant="16" id="us3-gs-pcj"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="gU8-Ve-QbD"/>
+                    <navigationItem key="navigationItem" title="Tempat Wisata" largeTitleDisplayMode="always" id="gU8-Ve-QbD"/>
+                    <connections>
+                        <outlet property="tempatWisataTableView" destination="PEA-I3-Oiw" id="1lz-zL-36q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,9 +109,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xm4-Ku-i9x" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wwi-BK-BTD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wwi-BK-BTD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.66666666669999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.062745098040000002" green="0.094117647060000004" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -44,8 +128,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
