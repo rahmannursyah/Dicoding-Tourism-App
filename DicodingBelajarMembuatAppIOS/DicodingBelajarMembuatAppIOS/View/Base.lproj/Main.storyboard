@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,14 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-I3-Oiw">
-                                <rect key="frame" x="16" y="88" width="382" height="758"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-I3-Oiw">
+                                <rect key="frame" x="0.0" y="104" width="414" height="742"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="136" id="vEc-61-oKP" customClass="TempatWisataTableViewCell" customModule="DicodingBelajarMembuatAppIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="382" height="136"/>
+                                        <rect key="frame" x="20" y="32" width="374" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vEc-61-oKP" id="gCp-2P-Z4E">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulau Komodo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dLn-Au-L5u">
@@ -41,7 +40,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabupaten Manggarai Barat, NTT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-Hc-cqe">
-                                                    <rect key="frame" x="124" y="49" width="242" height="16"/>
+                                                    <rect key="frame" x="124" y="49" width="234" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -87,15 +86,22 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94911080599999997" green="0.9486449361" blue="0.96700364350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PEA-I3-Oiw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0KQ-bA-wrS"/>
+                            <constraint firstItem="PEA-I3-Oiw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="0KQ-bA-wrS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PEA-I3-Oiw" secondAttribute="bottom" constant="16" id="OA4-xI-Yri"/>
-                            <constraint firstItem="PEA-I3-Oiw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Odp-Gf-4DY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PEA-I3-Oiw" secondAttribute="trailing" constant="16" id="us3-gs-pcj"/>
+                            <constraint firstItem="PEA-I3-Oiw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Odp-Gf-4DY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PEA-I3-Oiw" secondAttribute="trailing" id="us3-gs-pcj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tempat Wisata" largeTitleDisplayMode="always" id="gU8-Ve-QbD"/>
+                    <navigationItem key="navigationItem" title="Tempat Wisata" largeTitleDisplayMode="always" id="gU8-Ve-QbD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle.fill" catalog="system" id="Nne-WY-YUU">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTappedProfile:" destination="BYZ-38-t0r" id="fYL-aJ-RN4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tempatWisataTableView" destination="PEA-I3-Oiw" id="1lz-zL-36q"/>
                     </connections>
@@ -109,7 +115,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xm4-Ku-i9x" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wwi-BK-BTD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="wwi-BK-BTD">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.66666666669999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,8 +135,6 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

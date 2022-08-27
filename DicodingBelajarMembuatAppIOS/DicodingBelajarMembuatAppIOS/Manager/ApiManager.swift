@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Kingfisher
 
 class ApiManager {
 	static let shared = ApiManager()
@@ -26,22 +25,4 @@ class ApiManager {
 		}
 	}
 	
-	//	fetch image from url string from inside tempat wisata model
-	func downloadImage(urlStr: String, completion: @escaping (Result<UIImage, KingfisherError>) -> Void) {
-		let url = URL(string: urlStr)
-		
-		guard let url = url else { return }
-		
-		let resource = ImageResource(downloadURL: url)
-		
-		KingfisherManager.shared.retrieveImage(with: resource) { result in
-			switch result {
-			case .success(let data):
-				completion(.success(data.image))
-			case .failure(let error):
-				completion(.failure(error))
-			}
-		}
-		
-	}
 }

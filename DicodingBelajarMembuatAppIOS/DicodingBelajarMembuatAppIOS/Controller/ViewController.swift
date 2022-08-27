@@ -11,12 +11,16 @@ import Kingfisher
 class ViewController: UIViewController {
 
 	@IBOutlet weak var tempatWisataTableView: UITableView!
+	@IBAction func didTappedProfile(_ sender: Any) {
+		presentProfileVC()
+	}
 	
 	var tempatWisata: [Place]? {
 		didSet {
 			tempatWisataTableView.reloadData()
 		}
 	}
+	var tempatWisataImages: [UIImage]? = []
 	var errorFetchData: String?
 	
 	override func viewDidLoad() {
@@ -31,6 +35,10 @@ class ViewController: UIViewController {
 		navigationController?.navigationBar.prefersLargeTitles = true
 	}
 	
+	func presentProfileVC() {
+		let profileVC = UIStoryboard.init(name: "Profile", bundle: Bundle.main).instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
+		navigationController?.pushViewController(profileVC ?? ViewController(), animated: true)
+	}
 }
 
 extension ViewController {
@@ -39,10 +47,33 @@ extension ViewController {
 			switch result {
 			case .success(let place):
 				self?.tempatWisata = place
+				guard let tempat = self?.tempatWisata else {
+					return
+				}
+				self?.fetchTourismImages(placeData: tempat)
 			case .failure(let error):
 				self?.errorFetchData = error.localizedDescription
 			}
 		}
+	}
+	
+	func fetchTourismImages(placeData: [Place]) {
+		for index in 0..<(placeData.count) {
+			if let urlFromStr = URL(string: placeData[index].image) {
+				let resource = ImageResource(downloadURL: urlFromStr)
+				KingfisherManager.shared.retrieveImage(with: resource) { [weak self] result in
+					DispatchQueue.main.async {
+						switch result {
+						case .success(let value):
+							self?.tempatWisataImages?.append(value.image)
+						case .failure(let error):
+							print(error.localizedDescription)
+						}
+					}
+				}
+			}
+		}
+		
 	}
 }
 
@@ -70,8 +101,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		
-		let detailVC = TempatWisataDetailController()
-		navigationController?.pushViewController(detailVC, animated: true)
+		let detailVC = UIStoryboard.init(name: "TempatWisataDetail", bundle: Bundle.main).instantiateViewController(withIdentifier: "TempatWisataDetail") as? TempatWisataDetailController
+		detailVC?.tempatWisataDetailData = tempatWisata?[indexPath.row]
+		detailVC?.tempatWisataDetailImage = tempatWisataImages?[indexPath.row]
+		navigationController?.pushViewController(detailVC ?? ViewController(), animated: true)
 	}
 	
 }

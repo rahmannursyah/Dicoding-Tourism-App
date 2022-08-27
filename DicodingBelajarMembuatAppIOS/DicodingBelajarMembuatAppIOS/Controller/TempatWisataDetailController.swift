@@ -16,9 +16,21 @@ class TempatWisataDetailController: UIViewController {
 	@IBOutlet weak var letakTitleLbl: UILabel!
 	@IBOutlet weak var letakLbl: UILabel!
 	@IBOutlet weak var descLbl: UILabel!
+	
+	var tempatWisataDetailImage: UIImage?
+	var tempatWisataDetailData: Place?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.title = "Detail"
-		self.view.backgroundColor = .white
+//		self.view.backgroundColor = .clear
+		setupView()
+	}
+	
+	func setupView() {
+		detailImageView.image = tempatWisataDetailImage
+		tempatWisataLbl.text = tempatWisataDetailData?.name
+		letakLbl.text = tempatWisataDetailData?.address
+		descLbl.text = tempatWisataDetailData?.placeDescription
+		self.title = tempatWisataDetailData?.name
 	}
 }

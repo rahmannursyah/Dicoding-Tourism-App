@@ -11,12 +11,12 @@
         <!--Tempat Wisata Detail Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TempatWisataDetailController" customModule="DicodingBelajarMembuatAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TempatWisataDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TempatWisataDetailController" customModule="DicodingBelajarMembuatAppIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-eM-muV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-eM-muV">
                                 <rect key="frame" x="20" y="68" width="120" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="1g6-QE-dc7"/>
@@ -43,7 +43,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGn-eG-KJ2">
                                 <rect key="frame" x="20" y="252" width="374" height="590"/>
-                                <mutableString key="text">Pulau Komodo adalah sebuah pulau yang terletak di Kepulauan Nusa Tenggara. Pulau Komodo dikenal sebagai habitat asli hewan komodo. Pulau ini juga merupakan kawasan Taman Nasional Komodo yang dikelola oleh Pemerintah Pusat. Pulau Komodo berada di sebelah timur Pulau Sumbawa, yang dipisahkan oleh Selat Sape. Di Pulau Komodo, hewan komodo hidup dan berkembang biak dengan baik. Hingga Agustus 2009, di pulau ini terdapat sekitar 1300 ekor komodo. Ditambah dengan pulau lain, seperti Pulau Rinca dan dan Gili Motang, jumlah mereka keseluruhan mencapai sekitar 2500 ekor. Ada pula sekitar 100 ekor komodo di Cagar Alam Wae Wuul di daratan Pulau Flores tapi tidak termasuk wilayah Taman Nasional Komodo.</mutableString>
+                                <string key="text">Pulau Komodo adalah sebuah pulau yang terletak di Kepulauan Nusa Tenggara. Pulau Komodo dikenal sebagai habitat asli hewan komodo. Pulau ini juga merupakan kawasan Taman Nasional Komodo yang dikelola oleh Pemerintah Pusat. Pulau Komodo berada di sebelah timur Pulau Sumbawa, yang dipisahkan oleh Selat Sape. Di Pulau Komodo, hewan komodo hidup dan berkembang biak dengan baik. Hingga Agustus 2009, di pulau ini terdapat sekitar 1300 ekor komodo. Ditambah dengan pulau lain, seperti Pulau Rinca dan dan Gili Motang, jumlah mereka keseluruhan mencapai sekitar 2500 ekor. Ada pula sekitar 100 ekor komodo di Cagar Alam Wae Wuul di daratan Pulau Flores tapi tidak termasuk wilayah Taman Nasional Komodo.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,12 +79,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descLbl" destination="wGn-eG-KJ2" id="FzH-qn-e8G"/>
-                        <outlet property="detailImageView" destination="1lP-eM-muV" id="q97-oT-jmc"/>
-                        <outlet property="letakLbl" destination="tve-JP-0S0" id="I2i-Ny-Mac"/>
-                        <outlet property="letakTitleLbl" destination="ji5-fO-o9B" id="1jP-EY-PHy"/>
-                        <outlet property="tempatWisataLbl" destination="3aW-ZC-o6m" id="rP1-sk-sg7"/>
-                        <outlet property="tempatWisataTitleLbl" destination="7KS-0I-xrN" id="RCc-04-dN4"/>
+                        <outlet property="descLbl" destination="wGn-eG-KJ2" id="8ko-5K-OBO"/>
+                        <outlet property="detailImageView" destination="1lP-eM-muV" id="qML-rN-peA"/>
+                        <outlet property="letakLbl" destination="tve-JP-0S0" id="p20-ZM-j1q"/>
+                        <outlet property="letakTitleLbl" destination="ji5-fO-o9B" id="FAs-mn-IfN"/>
+                        <outlet property="tempatWisataLbl" destination="3aW-ZC-o6m" id="LPB-D5-ffN"/>
+                        <outlet property="tempatWisataTitleLbl" destination="7KS-0I-xrN" id="2ok-BG-9Hg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,7 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kingfisher-6.jpg" width="250" height="250"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
